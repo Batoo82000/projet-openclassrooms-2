@@ -1,0 +1,16 @@
+@font-face{
+    font-family: 'Raleway-VariableFont_wght.ttf';
+    src: url('Raleway-VariableFont_wght.ttf')
+}
+body
+{
+    font-family: 'Raleway-VariableFont_wght.ttf';
+}
+.menu_top
+{
+    text-align: right;
+}
+.logo_reservia
+{
+    float: left;
+}
