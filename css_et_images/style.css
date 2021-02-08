@@ -2,15 +2,45 @@
     font-family: 'Raleway-VariableFont_wght.ttf';
     src: url('Raleway-VariableFont_wght.ttf')
 }
+
 body
 {
     font-family: 'Raleway-VariableFont_wght.ttf';
 }
-.menu_top
+
+.firstmenu
 {
     text-align: right;
 }
+
 .logo_reservia
 {
     float: left;
+}
+
+.hebergement
+{
+    border: white;
+    background-color: #f3f8ff;
+    border-radius: 10px;
+}
+
+.menu_top:hover
+{
+    text-decoration: overline;
+    color: blue
+}
+p, h3
+{
+    width: 50%;
+    margin: 50px;
+    text-align: justify;
+}
+.fondbleu
+{
+    background-color: blue;
+    color: white;
+    border: blue;
+    border-radius: 4px;
+    
 }
