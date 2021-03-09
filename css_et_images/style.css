@@ -3,6 +3,11 @@
     box-sizing: border-box;
 }
 
+html
+{
+    line-height: 1;
+}
+
 @font-face{
     font-family: 'Raleway-VariableFont_wght.ttf';
     src: url('Raleway-VariableFont_wght.ttf')
@@ -11,21 +16,14 @@
 body
 {
     font-family: 'Raleway-VariableFont_wght.ttf', Arial, Helvetica, sans-serif;
-    display: flex;
-    flex-flow: row wrap;
     margin: auto;
     max-width: 1377px;
 }
 
-.firstmenu
+.logo_reservia
 {
-    text-align: right;
-}
-
-.menu_top:hover
-{
-    text-decoration: overline;
-    color:#2a67ff;
+    margin-top: 20px;
+    float: left;
 }
 
 .fondbleu
@@ -78,10 +76,32 @@ body
 .denominationfiltre {
     margin: 16px;
 }
-/*Partie gestion des filtres*/
+/*fin de la Partie gestion des filtres*/
 
 
+/*partie ligne information avec icone*/
 
+.titreinformation 
+{
+    display: flex;
+    align-items: center;
+    margin-left: 12px;
+    
+}
+.icone-info 
+{
+    display: flex;
+    align-items: center;
+    border: 1px solid #d9d9d9;
+    border-radius: 30px;
+    justify-content: center;
+    height: 22px;
+    width: 22px;
+    color: blue;
+    margin-right: 9px;
+}
+
+/*fin de la partie information avec icone*/
 
 #container
     {
@@ -93,6 +113,7 @@ body
 .img-hotel-container
 {
     height: 115px;
+    margin-bottom: -12px;
 }
 
 .img-hotel-container > img 
@@ -117,6 +138,22 @@ body
 {
         transform: scale(1.01);
 }
+
+.text-hotel-marseille
+{
+    margin-bottom: -10px;
+}
+
+/*partie couleur des etoiles*/
+.bleue
+{
+    color: blue;
+}
+.grise
+{
+    color: gray;
+}
+/*partie couleur des etoiles*/
 
 @media all and (max-width: 980px)    
 {
@@ -290,7 +327,53 @@ body
 @media all and (min-width: 981px)
 {    
 
+    /* partie mise en page des liens du menu top*/
+    .liens
+    {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-end;
+    }
+
+    a
+    {
+        color: black;
+        text-decoration: none;
+        padding-top: 30px;
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+
+    .hebergements
+    {
+        padding-top: 45px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .activites
+    {
+        padding-top: 45px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .sinscrire
+    {
+        padding-top: 45px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    a:hover
+    {
+        color: blue;
+        border-top: 2px solid blue;
+    }
     
+    /* fin de la partie mise en page des liens du menu top*/
+
+    /*partie hébergement à marseille*/
     #hebergements
     {
         display: grid;
@@ -314,6 +397,7 @@ body
         display: flex;
         flex-flow: column nowrap;
         border-radius: 15px;
+        background-color: white;
         box-shadow: 1px 1px 5px grey;
         transition: transform .1s;
         padding: 5px;
@@ -365,7 +449,9 @@ body
         grid-column: 1;
         grid-row: 4;
     }
+/* fin de la partie hébergement à marseille*/
 
+/*partie hotels populaires*/
     #populaires
     {
         display: flex;
@@ -400,8 +486,9 @@ body
     {
         margin-bottom: 40px;
     }
+/*fin de la partie hotels populaires*/
 
-    
+/*partie activités du site*/
     #activite
     {
         display: grid;
@@ -462,7 +549,9 @@ body
         grid-row-start: 3;
         grid-row-end: 6;
     }
+/*fin de la partie activités du site*/
 
+/*partie du menu pied de page*/
     #footer
     {
         display: grid;
@@ -486,7 +575,7 @@ body
     {
         grid-column: 3;
     }
-
+/*partie du menu pied de page*/
 }
 
 .offre >p
@@ -518,5 +607,6 @@ img
 {
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
