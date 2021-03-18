@@ -1,3 +1,4 @@
+/*partie mise en page généraliste du site*/
 *
 {
     box-sizing: border-box;
@@ -20,12 +21,107 @@ body
     max-width: 1377px;
 }
 
-.fondbleu
+.recherche
 {
-    background-color: #2a67ff;
-    color: white;
-    border: #2a67ff;
-    border-radius: 4px; 
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin-left: 10px;
+}
+.icone-gps 
+{
+    background-color: #F2F2F2;
+    border-radius: 15px 0 0 15px;
+    width: 50px;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    text-align: center;
+}
+.champ-de-recherche 
+{
+    border-right: none;
+    border-left: none;
+    border-top: #F2F2F2 1px solid;
+    border-bottom: #F2F2F2 1px solid;
+    padding-left: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    height: 50px;
+}
+
+.offre >p
+{
+    margin-left: 15px;
+}
+
+.offre >img
+{
+    border-radius: 10px 10px 0px 0px;
+}
+
+
+.offre:hover
+{
+    transform: scale(1.01);
+}
+
+.img-activite-container
+{
+    border-radius: 10px;
+}
+
+img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/*partie mise en page généraliste du site*/
+h4
+{
+    margin-bottom: 10px;
+    margin-left: 7px;
+}
+
+.texte-prix-nuit
+{
+    margin-left: 7px;
+    margin-top: 5px;
+}
+
+.etoiles
+{
+    margin-top: 5px;
+    margin-left: 7px;
+}
+
+.texte-populaire
+{
+    width: 65%;
+}
+
+.texte-populaire > p
+{
+    margin-left: 7px;
+}
+
+.etoilespop1
+{
+    margin-top: 30px;
+}
+.etoilespop2
+{
+    margin-top: 15px;
+}
+.etoilespop3
+{
+    margin-top: 30px;
+}
+
+.titre-populaires
+{
+    display: grid;
+    grid-template-columns: 310px auto;
 }
 
 #formulairederecherche
@@ -33,6 +129,10 @@ body
     display: flex;
 }
 
+.hotelpopulaire:hover
+{
+    transform: scale(1.01);
+}
 
 /*partie ligne information avec icone*/
 
@@ -60,10 +160,10 @@ body
 /*fin de la partie information avec icone*/
 
 #container
-    {
-        display: flex;
-        flex-flow: row wrap-reverse;
-    }
+{
+    display: flex;
+    flex-flow: row wrap-reverse;
+}
 
 
 .img-hotel-container
@@ -112,12 +212,13 @@ body
 /*partie couleur des etoiles*/
 
 /*partie media queries pour iphone8*/
-@media all and (max-width: 980px)    
+@media all and (max-width: 400px)    
 {
+    html
+    {
+        width: 375px;
+    }
 
-html{
-    width: 375px;
-}
 /*mise en page des liens du menu top*/
     .liens
     {
@@ -190,13 +291,27 @@ html{
 /*fin de la mise en page des liens du menu top*/
 .annonce
 {
-    margin-left: 20px;
+    margin-left: 10px;
 }
+
 h3
 {
     max-width: 350px;
     margin-right: 0px;
 }
+
+/*partie champs de recherche*/
+
+.champ-de-recherche 
+{
+    width: 170px;
+}
+
+.texte-bouton-recherche
+{
+    display: none;
+}
+
 /*Partie gestion des filtres*/
     .Filtres 
     {
@@ -240,6 +355,20 @@ h3
         margin: 16px;
     }
     /*fin de la Partie gestion des filtres*/
+    
+    /* partie barre de recherche*/
+    .bouton-recherche 
+    {
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        border-radius: 0px 15px 15px 0px;
+        background-color: #2a67ff;
+        height: 50px;
+        grid-column: 3;
+        border: none;
+    }
+    /*fin de la partie barre de la recherche*/
 
     .info
     {
@@ -295,6 +424,8 @@ h3
         height: 145px;
         width: 344px;
     }
+
+
 /*fin de la partie hotels populaires du site*/
 
 /*partie hébergements à Marseille*/
@@ -424,8 +555,9 @@ h3
 
 }
 /*fin de la partie media queries pour iphone8*/
-@media all and (min-width: 981px)
+@media all and (min-width: 401px)
 {
+
 /* partie mise en page des liens du menu top*/
     .liens
     {
@@ -444,9 +576,9 @@ h3
     
     a
     {
-    align-content: center;
-    text-decoration: none;
-    color: black;
+        align-content: center;
+        text-decoration: none;
+        color: black;
     }
     
     .hebergements
@@ -495,47 +627,73 @@ h3
     }
 /* fin de la partie mise en page des liens du menu top*/
 
-/* Partie gestion des filtres */
-.Filtres 
+/*partie annonce du site*/
+.annonce
 {
-    display: flex;
-    margin-top: 30px;
     margin-left: 10px;
-    flex-flow: row wrap;
 }
-.titrefiltres 
-{
-    margin: 0 32px 16px 10px;
-    display: flex;
-    align-items: center;
-}
-.differentsfiltres 
-{
-    display: flex;
-    align-items: center;
-    margin-right: 32px;
-    border: 2px solid #d9d9d9;
-    border-radius: 32px;
-    margin-bottom: 16px;
-    cursor: pointer;
-    font-weight: bold;
-}
-.icone 
-{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #e0ebff;
-    border-radius: 50px;
-    min-height: 56px;
-    min-width: 56px;
-    margin: -2px;
-    color: blue;
-}
-.denominationfiltre 
-{
-    margin: 16px;
-}
+/*fin de la partie annonce du site*/
+
+/* partie barre de recherche*/
+    .bouton-recherche 
+    {
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        border-radius: 0px 15px 15px 0px;
+        background-color: #2a67ff;
+        height: 50px;
+        border: none;
+    }
+
+    .icone-loupe
+    {
+        display: none;
+    }
+
+/*fin de la partie barre de la recherche*/
+
+/* Partie gestion des filtres */
+    .Filtres 
+    {
+        display: flex;
+        margin-top: 30px;
+        margin-left: 10px;
+        flex-flow: row wrap;
+    }
+    .titrefiltres 
+    {
+        margin: 0 32px 16px 10px;
+        display: flex;
+        align-items: center;
+    }
+    .differentsfiltres 
+    {
+        display: flex;
+        align-items: center;
+        margin-right: 32px;
+        border: 2px solid #d9d9d9;
+        border-radius: 32px;
+        margin-bottom: 16px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+    .icone 
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #e0ebff;
+        border-radius: 50px;
+        min-height: 56px;
+        min-width: 56px;
+        margin: -2px;
+        color: blue;
+    }
+    .denominationfiltre 
+    {
+        margin: 16px;
+    }
 /*fin de la Partie gestion des filtres*/
 
 /* partie hébergement à marseille */
@@ -757,79 +915,5 @@ h3
 }
 /*fin de la mise en page pc du site*/
 
-/*partie mise en page généraliste du site*/
-.offre >p
-{
-    margin-left: 15px;
-}
-
-.offre >img
-{
-    border-radius: 10px 10px 0px 0px;
-}
 
 
-.offre:hover
-{
-    transform: scale(1.01);
-}
-
-.img-activite-container
-{
-    border-radius: 10px;
-}
-
-img
-{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-/*partie mise en page généraliste du site*/
-h4
-{
-    margin-bottom: 10px;
-    margin-left: 7px;
-}
-
-.texte-prix-nuit
-{
-    margin-left: 7px;
-    margin-top: 5px;
-}
-
-.etoiles
-{
-    margin-top: 5px;
-    margin-left: 7px;
-}
-
-.texte-populaire
-{
-    width: 65%;
-
-}
-
-.texte-populaire > p
-{
-    margin-left: 7px;
-}
-
-.etoilespop1
-{
-    margin-top: 30px;
-}
-.etoilespop2
-{
-    margin-top: 15px;
-}
-.etoilespop3
-{
-    margin-top: 30px;
-}
-
-.titre-populaires
-{
-    display: grid;
-    grid-template-columns: 310px auto;
-}

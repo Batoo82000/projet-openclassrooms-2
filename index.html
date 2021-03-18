@@ -12,34 +12,45 @@
 
 <body>
     <header>
-    <div id="header">
 
-
-    
 <!-- mise en page des liens du menu top-->  
-        <div class="liens">
-            <img class="logo_reservia" 
-            src="css_et_images/images/logo/Reservia@3x.png" 
-            alt="logo_réservia"  
-            style="width: 97px; height: 45px;">
-            <a class="hebergements" href="#hebergements">Hébergements</a>
-            <a class="activites" href="#activite">Activités</a>
-            <a class="sinscrire" href="#sinscrire">S'inscrire</a>
-        </div>
+    <div class="liens">
+        <img class="logo_reservia" 
+        src="css_et_images/images/logo/Reservia@3x.png" 
+        alt="logo_réservia"  
+        style="width: 97px; height: 45px;">
+        <a class="hebergements" href="#hebergements">Hébergements</a>
+        <a class="activites" href="#activite">Activités</a>
+        <a class="sinscrire" href="#sinscrire">S'inscrire</a>
+    </div>
 <!-- fin de la mise en page des liens du menu top-->
+
+<!-- partie annonce-->
         <div class="annonce">
         <h3>Trouvez votre hébergement des pour des vacances de rêve</h3>
         <p>En plein centre ville ou en pleine nature</p>
         </div>
+<!-- fin de la partie annonce-->
         
+<!-- partie barre de recherche-->
+        <div class="recherche">
 
-    <form action="" method="" id="formulairederecherche">
-        <img src="css_et_images/map-marker-alt-solid.svg" 
-            alt="gps" 
-            class="gps" 
-            style="width: 15px; height: 15px;">
-            <input type="text" value="Marseille">, France <button type="button" class="fondbleu">Rechercher</button>
-         </form>
+            <i class="fas fa-map-marker-alt icone-gps"></i>
+
+        <input class="champ-de-recherche" type="search" placeholder="Marseille, France">
+
+        <button class="bouton-recherche">
+
+            <div class="texte-bouton-recherche">Rechercher
+                
+            </div>
+
+            <i class="fas fa-search icone-loupe"></i>
+
+        </button>
+
+        </div>
+<!-- fin de la partie barre de recherche-->
 
 <!-- partie gestion des filtres-->
 <div class="Filtres">
