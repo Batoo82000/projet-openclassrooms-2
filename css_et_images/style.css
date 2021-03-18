@@ -118,11 +118,6 @@ h4
     margin-top: 30px;
 }
 
-.titre-populaires
-{
-    display: grid;
-    grid-template-columns: 310px auto;
-}
 
 #formulairederecherche
 {
@@ -311,7 +306,10 @@ h3
 {
     display: none;
 }
-
+.bouton-recherche
+{
+    width: 50px;
+}
 /*Partie gestion des filtres*/
     .Filtres 
     {
@@ -393,6 +391,11 @@ h3
         padding-left: 15px;
     }
 
+    .titre-populaires
+    {
+        display: grid;
+        grid-template-columns: 310px auto;
+    }
 
     .hotelpopulaire1
     {
@@ -555,7 +558,9 @@ h3
 
 }
 /*fin de la partie media queries pour iphone8*/
-@media all and (min-width: 401px)
+
+/*mise en page pour pc*/
+@media all and (min-width: 1360px)
 {
 
 /* partie mise en page des liens du menu top*/
@@ -807,6 +812,12 @@ h3
 
     }
 
+    .titre-populaires
+    {
+        display: grid;
+        grid-template-columns: 310px auto;
+    }
+
     .hotelpopulaire1
     {
         margin-bottom: 40px;
@@ -913,7 +924,428 @@ h3
     }
 /*partie du menu pied de page*/
 }
-/*fin de la mise en page pc du site*/
+/*fin de la mise en page pc*/
+
+
+/*mise en page pour tablettes*/
+@media all and (min-width: 401px) and (max-width: 1359px)    
+{
+    html
+    {
+        width: 768px;
+    }
+
+/*mise en page des liens du menu top*/
+    .liens
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    
+    .logo_reservia
+    {
+        grid-column: 1;
+        grid-row: 1;
+        margin-top: 15px;
+        margin-left: 20px;
+    }
+
+    a
+    {
+    align-content: center;
+    text-decoration: none;
+    color: black;
+    }
+
+    .sinscrire
+    {
+        padding-top: 30px;
+        padding-left: 55px;
+        grid-column: 2;
+        grid-row: 1;
+        justify-self: center;
+        color: #2a67ff;
+    }
+
+    .hebergements
+    {
+        padding-top: 20px;
+        padding-right: 100px;
+        padding-left: 100px;
+        grid-column: 1;
+        grid-row: 2;
+        justify-self: center;
+        border-bottom: 2px solid #f2f2f2;
+    }
+
+    .hebergements:hover
+    {
+        color: #2a67ff;
+        border-bottom: 2px solid #2a67ff;
+    }
+
+    .activites
+    {
+        padding-top: 20px;
+        padding-right: 100px;
+        padding-left: 100px;
+        padding-bottom: 26px;
+        grid-column: 2;
+        grid-row: 2;
+        justify-self: center;
+        border-bottom: 2px solid #f2f2f2;
+    }
+
+    .activites:hover
+    {
+        color: #2a67ff;
+        border-bottom: 2px solid #2a67ff;
+    }
+
+
+/*fin de la mise en page des liens du menu top*/
+    .annonce
+    {
+        margin-left: 10px;
+    }
+
+    h3
+    {
+        max-width: 700px;
+        margin-right: 0px;
+    }
+
+/*partie champs de recherche*/
+
+    .texte-bouton-recherche
+    {
+        display: none;
+    }
+    .bouton-recherche
+    {
+        width: 50px;
+    }
+    .champ-de-recherche
+    {
+        width: 620px;
+    }
+
+/*Partie gestion des filtres*/
+    .Filtres 
+    {
+        display: grid;
+        margin-top: 30px;
+        margin-left: 10px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr 1fr;
+    }
+    .titrefiltres 
+    {
+        margin: 0 32px 16px 10px;
+        padding-right: 100px;
+        align-items: center;
+    }
+    .differentsfiltres 
+    {
+        display: flex;
+        align-items: center;
+        margin-right: 32px;
+        border: 2px solid #d9d9d9;
+        border-radius: 32px;
+        margin-bottom: 16px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+    .icone 
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #e0ebff;
+        border-radius: 50px;
+        min-height: 56px;
+        min-width: 56px;
+        margin: -2px;
+        color: blue;
+    }
+    .denominationfiltre 
+    {
+        margin: 16px;
+    }
+    .economique
+    {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .familial
+    {
+        grid-column: 2;
+        grid-row: 2;
+    }
+    .romantique
+    {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    .animaux
+    {
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    /*fin de la Partie gestion des filtres*/
+    
+    /* partie barre de recherche*/
+    .bouton-recherche 
+    {
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        border-radius: 0px 15px 15px 0px;
+        background-color: #2a67ff;
+        height: 50px;
+        grid-column: 3;
+        border: none;
+    }
+    /*fin de la partie barre de la recherche*/
+
+    .info
+    {
+        width: 700px;
+    }
+
+    #container
+    {
+        display: grid;
+        grid-template-rows: 620px 1fr;
+    }
+
+/*partie hotels populaires du site*/
+    #populaires
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto 1fr;
+        grid-row: 1;
+        background-color: #f2f2f2;
+        width: 768px;
+        padding-left: 15px;
+        justify-items: center;
+    }
+
+    .titre-populaires
+    {
+        grid-row: 1;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .hotelpopulaire1
+    {
+        margin-bottom: 40px;
+        grid-row: 2;
+        grid-column: 1;
+    }
+
+    .hotelpopulaire2
+    {
+        margin-bottom: 40px;
+        grid-row: 2;
+        grid-column: 2;
+    }
+
+    .hotelpopulaire3
+    {
+        grid-row: 2;
+        grid-column: 3;
+    }
+    
+
+    .hotelpopulaire
+    {
+        display: flex;
+        flex-flow: column nowrap;
+        border-radius: 15px;
+        background-color: white;
+        box-shadow: 1px 1px 5px grey;
+        transition: transform .1s;
+        padding: 5px;
+        height: 145px;
+        width: 344px;
+    }
+    .img-populaire-container
+    {
+        border-radius: 10px 10px 0 0;
+    }
+
+/*fin de la partie hotels populaires du site*/
+
+/*partie hébergements à Marseille*/
+    #hebergements
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto repeat(3, 1fr) auto;
+        border-radius: 15px;
+        padding-top: 20px;
+        width: 768px;
+        margin-left: 5px;
+    }
+    .titre_hebergement
+    {
+        grid-row: 1;
+        margin-left: 15px;
+    }
+
+    .hotel
+    {
+        display: flex;
+        flex-flow: column nowrap;
+        border-radius: 15px;
+        box-shadow: 1px 1px 5px grey;
+        transition: transform .1s;
+        padding: 5px;
+        width: 334px;
+        height: 200px;
+        margin-left: 10px;
+    }
+
+    .hotelhebergement1
+    {
+        grid-column: 1;
+        grid-row: 2;
+        margin-bottom: 20px;
+    }
+
+    .hotelhebergement2
+    {
+        grid-column: 1;
+        grid-row: 3;
+    }  
+
+    .hotelhebergement3
+    {
+        grid-column: 1;
+        grid-row: 4;
+    }
+
+    .hotelhebergement4
+    {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .hotelhebergement5
+    {
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    .hotelhebergement6
+    {
+        grid-column: 2;
+        grid-row: 4;
+    }
+
+    .afficherplus
+    {
+        grid-row: 8;
+        margin-left: 20px;
+    }
+/*partie hébergements à Marseille*/
+
+/*partie activités à Marseille du site*/
+    #activite
+    {
+            display: grid;
+            grid-template-rows: 37px repeat(3, 215px);
+            grid-template-columns: 384px 384px;
+            margin-left: 5px;
+    }
+
+    .titre_activite
+    {
+            margin-left: 20px;
+            grid-row: 1;
+            grid-column: 1;
+    }
+    .offre
+    {
+            display: flex;
+            flex-flow: column nowrap;
+            border-radius: 15px;
+            margin-top: 20px;
+            margin-left: 10px;
+            box-shadow: 1px 1px 5px grey;
+            transition: transform .1s;
+            height: 191px;
+            width: 336px;
+    }
+    .offre1
+    {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .offre2
+    {
+        grid-column: 2;
+        grid-row: 2;
+    }
+    .offre3
+    {
+        grid-column: 2;
+        grid-row: 3;
+    }
+    .offre4
+    {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    .offre5
+    {
+        grid-column: 1;
+        grid-row: 4;
+    }
+    .offre6
+    {
+        grid-column: 2;
+        grid-row: 4;
+    }
+/*fin de la partie activités à Marseille du site*/
+
+/* partie pied de page */
+    #footer
+    {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(2, 1fr);
+            background-color: #f2f2f2;
+            margin-top: 40px;
+            padding-top: 20px;
+    }
+
+    .a-propos
+    {
+            grid-row: 1;
+            margin-left: 30px;
+    }
+
+    .nos-hebergements
+    {
+            grid-row: 2;
+            margin-left: 30px;
+    }
+
+    .assistance
+    {
+            grid-column: 2;
+            grid-row: 1;
+            margin-left: 30px;
+    }
+/* fin de la partie pied de page */
+
+}
 
 
 
