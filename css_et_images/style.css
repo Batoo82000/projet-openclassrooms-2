@@ -69,13 +69,14 @@ body
 {
     border-radius: 10px;
 }
-
-img
+/*
+.offre > img
 {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+*/
 /*partie mise en page généraliste du site*/
 h4
 {
@@ -95,30 +96,6 @@ h4
     margin-left: 7px;
 }
 
-.texte-populaire
-{
-    width: 65%;
-}
-
-.texte-populaire > p
-{
-    margin-left: 7px;
-}
-
-.etoilespop1
-{
-    margin-top: 30px;
-}
-.etoilespop2
-{
-    margin-top: 15px;
-}
-.etoilespop3
-{
-    margin-top: 30px;
-}
-
-
 #formulairederecherche
 {
     display: flex;
@@ -128,7 +105,10 @@ h4
 {
     transform: scale(1.01);
 }
-
+img
+{
+    object-fit: cover;
+}
 /*partie ligne information avec icone*/
 
 .titreinformation 
@@ -154,35 +134,15 @@ h4
 
 /*fin de la partie information avec icone*/
 
-#container
-{
-    display: flex;
-    flex-flow: row wrap-reverse;
-}
 
-
-.img-hotel-container
-{
-    height: 110px;
-    margin-bottom: -15px;
-}
 
 .img-hotel-container > img 
 {
     border-radius: 15px 15px 0px 0px;
     width: 100%;
-}
-
-.img-populaire-container
-{
-    height: 100%;
-    width: 127px;
-}
-
-.img-populaire-container > img 
-{
-    border-radius: 15px 0px 0px 15px;
-    width: 94%;
+    height: 110px;
+    margin-bottom: -15px;
+    object-fit: cover;
 }
 
 .hotel:hover
@@ -206,19 +166,19 @@ h4
 }
 /*partie couleur des etoiles*/
 
-/*partie media queries pour iphone8*/
-@media all and (max-width: 400px)    
+/*partie media queries pour smatphone*/
+@media all and (max-width: 568px)    
 {
     html
     {
-        width: 375px;
+        width: auto;
     }
 
 /*mise en page des liens du menu top*/
     .liens
     {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 50% 50%;
         grid-template-rows: 1fr 1fr;
     }
     
@@ -239,19 +199,19 @@ h4
 
     .sinscrire
     {
-        padding-top: 30px;
-        padding-left: 55px;
+        margin-top: 20px;
         grid-column: 2;
         grid-row: 1;
         justify-self: center;
         color: #2a67ff;
+        font-weight: bold;
     }
 
     .hebergements
     {
         padding-top: 20px;
-        padding-right: 50px;
-        padding-left: 50px;
+        padding-right: 30%;
+        padding-left: 30%;
         grid-column: 1;
         grid-row: 2;
         justify-self: center;
@@ -267,8 +227,8 @@ h4
     .activites
     {
         padding-top: 20px;
-        padding-right: 47px;
-        padding-left: 50px;
+        padding-right: 30%;
+        padding-left: 30%;
         padding-bottom: 26px;
         grid-column: 2;
         grid-row: 2;
@@ -296,20 +256,22 @@ h3
 }
 
 /*partie champs de recherche*/
+    .champ-de-recherche 
+    {
+        width: 250px;
+    }
 
-.champ-de-recherche 
-{
-    width: 170px;
-}
+    .texte-bouton-recherche
+    {
+        display: none;
+    }
+    .bouton-recherche
+    {
+        width: 50px;
+    }
+/*fin de la partie champs de recherche*/
 
-.texte-bouton-recherche
-{
-    display: none;
-}
-.bouton-recherche
-{
-    width: 50px;
-}
+
 /*Partie gestion des filtres*/
     .Filtres 
     {
@@ -368,11 +330,18 @@ h3
     }
     /*fin de la partie barre de la recherche*/
 
-    .info
-    {
-    width: 370px;
-    }
-
+    /*partie ligne info*/
+        .info
+        {
+            width: 90%;
+            margin-bottom: 20px;
+        }
+        .icone-info
+        {
+            margin-bottom: 25px;
+            margin-right: 15px;
+        }
+    /*fin partie ligne info*/
     #container
     {
         display: grid;
@@ -387,14 +356,15 @@ h3
         grid-template-rows: auto 1fr 1fr 1fr;
         grid-row: 1;
         background-color: #f2f2f2;
-        width: 375px;
         padding-left: 15px;
+        margin-top: 20px;
+        padding-right: 15px;
     }
 
     .titre-populaires
     {
         display: grid;
-        grid-template-columns: 310px auto;
+        grid-template-columns: 1fr auto;
     }
 
     .hotelpopulaire1
@@ -425,9 +395,47 @@ h3
         transition: transform .1s;
         padding: 5px;
         height: 145px;
-        width: 344px;
+        width: 100%;
+    }
+    .img-populaire-container
+    {
+        height: 100%;
+        width: 45%;
+        border-radius: 15px 0px 0px 15px;
     }
 
+    .img-populaire-container > img 
+    {
+        border-radius: 15px 0px 0px 15px;
+        width: 100%;
+        height: 100%;
+        margin-bottom: -15px;
+    }
+
+    .texte-populaire
+    {
+        margin-top: -10px;
+        width: 50%;
+    }
+
+    .texte-populaire > p
+    {
+        margin-left: 7px;
+        margin-bottom: -10px;
+    }
+
+    .etoilespop1
+    {
+        margin-top: 20px;
+    }
+    .etoilespop2
+    {
+        margin-top: 15px;
+    }
+    .etoilespop3
+    {
+        margin-top: 20px;
+    }
 
 /*fin de la partie hotels populaires du site*/
 
@@ -439,7 +447,6 @@ h3
         grid-template-rows: auto repeat(6, 1fr) auto;
         border-radius: 15px;
         padding-top: 20px;
-        width: 370px;
         margin-left: 5px;
     }
     .titre_hebergement
@@ -456,9 +463,10 @@ h3
         box-shadow: 1px 1px 5px grey;
         transition: transform .1s;
         padding: 5px;
-        width: 334px;
+        width: auto;
         height: 200px;
         margin-left: 10px;
+        margin-right: 15px;
     }
 
     .hotelhebergement1
@@ -503,14 +511,14 @@ h3
     #activite
     {
             display: grid;
-            grid-template-rows: 37px repeat(6, 215px);
+            grid-template-rows: 37px repeat(6, 1fr);
             margin-left: 5px;
     }
 
     .titre_activite
     {
             margin-left: 20px;
-            width: 300px;
+            width: 250px;
     }
     .offre
     {
@@ -519,10 +527,17 @@ h3
             border-radius: 15px;
             margin-top: 20px;
             margin-left: 10px;
+            margin-right: 15px;
             box-shadow: 1px 1px 5px grey;
             transition: transform .1s;
             height: 191px;
-            width: 336px;
+            width: auto;
+    }
+    .offre > img
+    {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
     }
 /*fin de la partie activités à Marseille du site*/
 
@@ -530,7 +545,7 @@ h3
     #footer
     {
             display: grid;
-            grid-template-columns: 340px;
+            grid-template-columns: 1fr;
             grid-template-rows: repeat(3, 1fr);
             background-color: #f2f2f2;
             margin-top: 40px;
@@ -557,12 +572,15 @@ h3
 /* fin de la partie pied de page */
 
 }
-/*fin de la partie media queries pour iphone8*/
+/*fin de la partie media queries pour smartphone*/
 
 /*mise en page pour pc*/
-@media all and (min-width: 1360px)
+@media all and (min-width: 1025px)
 {
-
+    html
+    {
+        width: auto;
+    }
 /* partie mise en page des liens du menu top*/
     .liens
     {
@@ -633,10 +651,10 @@ h3
 /* fin de la partie mise en page des liens du menu top*/
 
 /*partie annonce du site*/
-.annonce
-{
-    margin-left: 10px;
-}
+    .annonce
+    {
+        margin-left: 10px;
+    }
 /*fin de la partie annonce du site*/
 
 /* partie barre de recherche*/
@@ -650,8 +668,7 @@ h3
         height: 50px;
         border: none;
     }
-
-    .icone-loupe
+    .bouton-recherche >.icone-loupe
     {
         display: none;
     }
@@ -701,17 +718,23 @@ h3
     }
 /*fin de la Partie gestion des filtres*/
 
+#container
+{
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+
 /* partie hébergement à marseille */
     #hebergements
     {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto 1fr 1fr auto;
+        grid-template-rows: auto 1fr 15px 1fr auto;
         border-radius: 15px;
         background-color: #f2f2f2;
-        width: 880px;
-        height: 628px;
-        padding-left: 40px;
+        height: 100%;
+        padding-left: 20px;
         padding-top: 20px;
         margin-left: 20px;
     }
@@ -731,53 +754,52 @@ h3
         box-shadow: 1px 1px 5px grey;
         transition: transform .1s;
         padding: 5px;
-        width: 247px;
-        height: 200px;
+        width: 90%;
+        height: auto;
     }
     
     .hotelhebergement1
     {
         grid-row: 2;
         grid-column: 1;
-        margin-bottom: 32px;
     }
     
     .hotelhebergement2
     {
         grid-row: 2;
         grid-column: 2;
+        padding-bottom: 20px;
     }  
     
     .hotelhebergement3
     {
         grid-row: 2;
         grid-column: 3;
-        margin-left: 10px;
+
     }
     
     .hotelhebergement4
     {
-        grid-row: 3;
+        grid-row: 4;
         grid-column: 1;
     }
     
     .hotelhebergement5
     {
-        grid-row: 3;
+        grid-row: 4;
         grid-column: 2;
     }
     
     .hotelhebergement6
     {
-        grid-row: 3;
+        grid-row: 4;
         grid-column: 3;
-        margin-left: 10px;
     }
     
     .afficherplus
     {
         grid-column: 1;
-        grid-row: 4;
+        grid-row: 5;
         margin-bottom: 20px;
         margin-top: 0px;
     }
@@ -786,16 +808,15 @@ h3
 /*partie hotels populaires*/
     #populaires
     {
-        display: flex;
-        flex-flow: row wrap;
-        width: 420px;
-        padding: 12px;
-        border-radius: 15px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr 1fr 1fr;
         background-color: #f2f2f2;
-        margin-left: 40px;
-        padding-left: 40px;
-        height: 628px;
-
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-left: 10px;
+        margin-right: 10px;
+        border-radius: 15px;
     }
 
     .hotelpopulaire
@@ -804,18 +825,17 @@ h3
         flex-flow: column wrap;
         border-radius: 15px;
         background-color: white;
-        box-shadow: 5px 5px 20px grey;
+        box-shadow: 1px 1px 5px grey;
         transition: transform .1s;
         padding: 6px;
-        height: 145px;
-        width: 344px;
-
+        max-height: 165px;
+        width: auto;
     }
 
     .titre-populaires
     {
         display: grid;
-        grid-template-columns: 310px auto;
+        grid-template-columns: 1fr auto;
     }
 
     .hotelpopulaire1
@@ -833,6 +853,45 @@ h3
         margin-bottom: 40px;
     }
 
+    .img-populaire-container
+    {
+        height: 100%;
+        width: 45%;
+        border-radius: 15px 0px 0px 15px;
+        margin-right: -5px;
+    }
+
+    .img-populaire-container > img 
+    {
+        border-radius: 15px 0px 0px 15px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .texte-populaire
+{
+    margin-top: -15px;
+    max-width: 58%;
+}
+
+.texte-populaire > p
+{
+    margin-left: 7px;
+    margin-bottom: 4px;
+}
+
+.etoilespop1
+{
+    margin-top: 30px;
+}
+.etoilespop2
+{
+    margin-top: 30px;
+}
+.etoilespop3
+{
+    margin-top: 30px;
+}
 /*fin de la partie hotels populaires*/
 
 /*partie activités du site*/
@@ -840,7 +899,8 @@ h3
     {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: auto 224px 66px 66px 224px;
+        grid-template-rows: auto 2fr 1fr 1fr 2fr;
+        max-height: 650px;
     }
 
     .titre_activite
@@ -858,6 +918,7 @@ h3
         margin: 20px;
         box-shadow: 1px 1px 5px grey;
         transition: transform .1s;
+
     }
 
     .offre1
@@ -866,11 +927,23 @@ h3
         grid-row-start: 2;
         grid-row-end: 6;
     }
+    .offre1 > img
+    {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    }
     .offre2
     {
         grid-column: 2;
         grid-row-start: 2;
         grid-row-end: 5;
+    }
+    .offre2 > img
+    {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
     }
     .offre3
     {
@@ -878,11 +951,23 @@ h3
         grid-row-start: 2;
         grid-row-end: 6;
     }
+    .offre3 > img
+    {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    }
     .offre4
     {
         grid-column: 4;
         grid-row-start: 2;
         grid-row-end: 4;
+    }
+    .offre4 > img
+    {
+    width: 100%;
+    height: 75%;
+    object-fit: cover;
     }
     .offre5
     {
@@ -890,11 +975,23 @@ h3
         grid-row-start: 5;
         grid-row-end: 6;
     }
+    .offre5 > img
+    {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    }
     .offre6
     {
         grid-column: 4;
         grid-row-start: 4;
         grid-row-end: 6;
+    }
+    .offre6 > img
+    {
+    width: 100%;
+    height: 85%;
+    object-fit: cover;
     }
 /*fin de la partie activités du site*/
 
@@ -902,7 +999,7 @@ h3
     #footer
     {
         display: grid;
-        grid-template-columns: repeat(3, 459px);
+        grid-template-columns: repeat(3, 1fr);
         background-color: #f2f2f2;
         margin : 12px
     }
@@ -928,11 +1025,11 @@ h3
 
 
 /*mise en page pour tablettes*/
-@media all and (min-width: 401px) and (max-width: 1359px)    
+@media all and (min-width: 569px) and (max-width: 1024px)    
 {
     html
     {
-        width: 768px;
+        width: auto;
     }
 
 /*mise en page des liens du menu top*/
@@ -1028,7 +1125,7 @@ h3
     }
     .champ-de-recherche
     {
-        width: 620px;
+        width: 82%;
     }
 
 /*Partie gestion des filtres*/
@@ -1037,7 +1134,7 @@ h3
         display: grid;
         margin-top: 30px;
         margin-left: 10px;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 48% 48%;
         grid-template-rows: auto 1fr 1fr;
     }
     .titrefiltres 
@@ -1118,78 +1215,120 @@ h3
     #container
     {
         display: grid;
-        grid-template-rows: 620px 1fr;
+        grid-template-rows: auto auto;
     }
 
 /*partie hotels populaires du site*/
+   
     #populaires
     {
+        grid-row: 1;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto 1fr;
-        grid-row: 1;
         background-color: #f2f2f2;
-        width: 768px;
-        padding-left: 15px;
+        padding-left: 10px;
         justify-items: center;
+        padding-bottom: 30px;
+    }
+
+    .hotelpopulaire
+    {
+        display: flex;
+        flex-flow: column wrap;
+        border-radius: 15px;
+        background-color: white;
+        box-shadow: 1px 1px 5px grey;
+        transition: transform .1s;
+        padding: 5px;
+        width: auto;
+        
+
     }
 
     .titre-populaires
     {
-        grid-row: 1;
-        grid-column-start: 1;
-        grid-column-end: 3;
+        display: grid;
+        grid-template-columns: 100% 1fr;
+        grid-column: 1;
+        padding-left: 10px;
     }
-
+    .icone-graphique
+    {
+        grid-column: 3;
+        padding-left: 10px;
+    }
     .hotelpopulaire1
     {
-        margin-bottom: 40px;
         grid-row: 2;
         grid-column: 1;
+        width: 90%;
     }
 
     .hotelpopulaire2
     {
-        margin-bottom: 40px;
+
         grid-row: 2;
         grid-column: 2;
+        width: 90%;
     }
 
     .hotelpopulaire3
     {
         grid-row: 2;
         grid-column: 3;
+        width: 90%;
     }
-    
 
-    .hotelpopulaire
+    .img-populaire-container > img 
     {
-        display: flex;
-        flex-flow: column nowrap;
-        border-radius: 15px;
-        background-color: white;
-        box-shadow: 1px 1px 5px grey;
-        transition: transform .1s;
-        padding: 5px;
-        height: 145px;
-        width: 344px;
+        border-radius: 15px 15px 0px 0px;
+        width: 100%;
+        height: 110px;
+        margin-bottom: -15px;
     }
+
     .img-populaire-container
     {
-        border-radius: 10px 10px 0 0;
+        height: auto;
+        margin-bottom: 40px;
     }
 
+    .texte-populaire
+    {
+        width: 90%;
+        margin-top: -40px;
+    }
+
+    .texte-populaire > p
+    {
+        margin-left: 7px;
+        margin-top: -5px;
+        margin-bottom: 5px;
+    }
+
+    .etoilespop1
+    {
+        margin-top: 0px;
+    }
+    .etoilespop2
+    {
+        margin-top: 0px;
+    }
+    .etoilespop3
+    {
+        margin-top: 0px;
+    }
 /*fin de la partie hotels populaires du site*/
 
 /*partie hébergements à Marseille*/
     #hebergements
     {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 49% 49%;
         grid-template-rows: auto repeat(3, 1fr) auto;
         border-radius: 15px;
         padding-top: 20px;
-        width: 768px;
         margin-left: 5px;
     }
     .titre_hebergement
@@ -1206,9 +1345,10 @@ h3
         box-shadow: 1px 1px 5px grey;
         transition: transform .1s;
         padding: 5px;
-        width: 334px;
+        max-width: 80%;
         height: 200px;
-        margin-left: 10px;
+        margin-left: 5%;
+        justify-content: center;
     }
 
     .hotelhebergement1
@@ -1260,10 +1400,9 @@ h3
     {
             display: grid;
             grid-template-rows: 37px repeat(3, 215px);
-            grid-template-columns: 384px 384px;
+            grid-template-columns: 49% 49%;
             margin-left: 5px;
     }
-
     .titre_activite
     {
             margin-left: 20px;
@@ -1279,13 +1418,19 @@ h3
             margin-left: 10px;
             box-shadow: 1px 1px 5px grey;
             transition: transform .1s;
-            height: 191px;
-            width: 336px;
+            max-width: 80%;
+            height: 200px;
     }
     .offre1
     {
         grid-column: 1;
         grid-row: 2;
+    }
+    .offre > img
+    {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
     }
     .offre2
     {
@@ -1297,21 +1442,25 @@ h3
         grid-column: 2;
         grid-row: 3;
     }
+
     .offre4
     {
         grid-column: 1;
         grid-row: 3;
     }
+
     .offre5
     {
         grid-column: 1;
         grid-row: 4;
     }
+
     .offre6
     {
         grid-column: 2;
         grid-row: 4;
     }
+
 /*fin de la partie activités à Marseille du site*/
 
 /* partie pied de page */
