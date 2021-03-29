@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" />
         <link rel="stylesheet" href="css_et_images/style.css" />
         <script src="https://kit.fontawesome.com/21c281287d.js" crossorigin="anonymous"></script>
         <title>Réservia : site de réservation en ligne</title>
@@ -12,59 +13,73 @@
 
 <body>
     <header>
-    <div id="header">
+
+<!-- mise en page des liens du menu top-->  
+    <div class="liens">
         <img class="logo_reservia" 
-             src="css_et_images/images/logo/Reservia@3x.png" 
-             alt="logo_réservia"  
-             style="width: 97px; height: 45px;">
+        src="css_et_images/images/logo/Reservia@3x.png" 
+        alt="logo_réservia"  
+        style="width: 97px; height: 45px;">
+        <a class="hebergements" href="#hebergements">Hébergements</a>
+        <a class="activites" href="#activite">Activités</a>
+        <a class="sinscrire" href="#sinscrire">S'inscrire</a>
+    </div>
+<!-- fin de la mise en page des liens du menu top-->
 
-    <!-- mise en page des liens du menu top-->  
-        <div class="liens">
-            <div class="hebergements"><a href="#hebergements">Hébergements</a></div>
-            <div class="activites"><a href="#activites">Activités</a></div>
-            <div class="sinscrire"><a href="#sinscrire">S'inscrire</a></div>
-        </div>
-    <!-- fin de la mise en page des liens du menu top-->
-
+<!-- partie annonce-->
+        <div class="annonce">
         <h3>Trouvez votre hébergement des pour des vacances de rêve</h3>
         <p>En plein centre ville ou en pleine nature</p>
+        </div>
+<!-- fin de la partie annonce-->
         
+<!-- partie barre de recherche-->
+        <div class="recherche">
 
-    <form action="" method="" id="formulairederecherche">
-        <img src="css_et_images/map-marker-alt-solid.svg" 
-            alt="gps" 
-            class="gps" 
-            style="width: 15px; height: 15px;">
-            <input type="text" value="Marseille">, France <button type="button" class="fondbleu">Rechercher</button>
-         </form>
+            <i class="fas fa-map-marker-alt icone-gps"></i>
+
+        <input class="champ-de-recherche" type="search" placeholder="Marseille, France">
+
+        <button class="bouton-recherche">
+
+            <div class="texte-bouton-recherche">Rechercher
+                
+            </div>
+
+            <i class="fas fa-search icone-loupe"></i>
+
+        </button>
+
+        </div>
+<!-- fin de la partie barre de recherche-->
 
 <!-- partie gestion des filtres-->
 <div class="Filtres">
     
     <h3 class="titrefiltres">Filtres</h3>
         
-        <div class="differentsfiltres">
+        <div class="differentsfiltres economique">
             <div class="icone">
                 <i class="fas fa-money-bill-wave"></i>
             </div>
                 <p class="denominationfiltre">Économique</p>
         </div>
         
-        <div class="differentsfiltres">
+        <div class="differentsfiltres familial">
             <div class="icone">
                 <i class="fas fa-child"></i>
             </div>
                <p class="denominationfiltre">Familial</p>
         </div>
         
-        <div class="differentsfiltres">
+        <div class="differentsfiltres romantique">
             <div class="icone">
                 <i class="fas fa-heart"></i>
             </div>
                <p class="denominationfiltre">Romantique</p>
             </div>
         
-        <div class="differentsfiltres">
+        <div class="differentsfiltres animaux">
             <div class="icone">
                 <i class="fas fa-dog"></i>
             </div>
@@ -83,15 +98,15 @@
     <p class="info">Plus de 500 logements sont disponibles dans cette ville</p>
 </div>
 <!-- fin de la partie ligne information avec icone-->
+</header>
 
 <div id="container">
 <!-- partie Hébergements à Marseille-->
-
     <section id="hebergements">
 
         <div class="titre_hebergement">
 
-        <h3>Hébergements à Marseille</h3><br />
+        <h2>Hébergements à Marseille</h2><br />
 
         </div>
 
@@ -105,11 +120,11 @@
             </div>
 
             <div class="text-hotel-marseille">
-                <p><strong>Auberge de la Cannebière</strong><br />
-                Nuit à partir de <strong>25€</strong><br /></p>
+                <h4>Auberge de la Cannebière</h4>
+                <p class="texte-prix-nuit">Nuit à partir de <strong>25€</strong></p>
             </div>
             
-            <div class="etoiles">
+            <div class="etoiles etoiles-hergement1">
                     <i class="fas fa-star bleue"></i><i class="fas fa-star bleue"></i><i class="fas fa-star bleue"></i><i class="fas fa-star bleue"></i><i class="fas fa-star grise"></i>
             </div>
 
@@ -125,11 +140,11 @@
             </div>
             
             <div class="text-hotel-marseille">
-                <p><strong>Hôtel du port</strong><br />
-                Nuit à partir de <strong>52€</strong><br /></p>
+                <h4>Hôtel du port</h4>
+                <p class="texte-prix-nuit">Nuit à partir de <strong>52€</strong></p>
             </div>
 
-            <div class="etoiles">
+            <div class="etoiles etoiles-hergement2">
                 <i class="fas fa-star bleue"></i><i class="fas fa-star bleue"></i><i class="fas fa-star bleue"></i><i class="fas fa-star bleue"></i><i class="fas fa-star grise"></i>
             </div>
 
@@ -138,18 +153,16 @@
         <div class="hotel hotelhebergement3">
 
             <div class="img-hotel-container">
-            
                 <img src="css_et_images/images/hebergements/3_medium/3.jpg" 
                 alt="hotel">
-            
             </div>
 
             <div class="text-hotel-marseille">
-                <p><strong>Hôtel les mouettes</strong><br />
-                Nuit à partir de <strong>76€</strong><br /></p>
+                <h4>Hôtel les mouettes</h4>
+                <p class="texte-prix-nuit">Nuit à partir de <strong>76€</strong></p>
             </div>
             
-            <div class="etoiles">
+            <div class="etoiles etoiles-hergement3">
                 <i class="fas fa-star bleue"></i><i class="fas fa-star bleue"></i><i class="fas fa-star bleue"></i><i class="fas fa-star bleue"></i><i class="fas fa-star grise"></i>
             </div>
 
@@ -165,11 +178,11 @@
             </div>
 
             <div class="text-hotel-marseille">
-                <p><strong>Hôtel de la mer</strong><br />
-                Nuit à partir de <strong>46€</strong><br /></p>
+                <h4>Hôtel de la mer</h4>
+                <p class="texte-prix-nuit">Nuit à partir de <strong>46€</strong><br /></p>
             </div> 
         
-            <div class="etoiles">
+            <div class="etoiles etoiles-hergement4">
                 <i class="fas fa-star bleue"></i><i class="fas fa-star bleue"></i><i class="fas fa-star bleue"></i><i class="fas fa-star bleue"></i><i class="fas fa-star grise"></i>
             </div>
 
@@ -185,11 +198,11 @@
             </div>
 
             <div class="text-hotel-marseille">
-            <p><strong>Auberge le panier</strong><br />
-            Nuit à partir de <strong>23€</strong><br /></p>
+            <h4>Auberge le panier</h4>
+            <p class="texte-prix-nuit">Nuit à partir de <strong>23€</strong></p>
             </div>  
             
-            <div class="etoiles">
+            <div class="etoiles etoiles-hergement5">
                 <i class="fas fa-star bleue"></i><i class="fas fa-star bleue"></i><i class="fas fa-star bleue"></i><i class="fas fa-star bleue"></i><i class="fas fa-star grise"></i>
             </div>        
         
@@ -205,88 +218,87 @@
             </div>
 
             <div class="text-hotel-marseille">
-            <p><strong>Hôtel chez Amina</strong><br />
-            Nuit à partir de <strong>96€</strong><br /></p>
+            <h4>Hôtel chez Amina</h4>
+            <p class="texte-prix-nuit">Nuit à partir de <strong>96€</strong></p>
             </div>
 
-            <div class="etoiles">
+            <div class="etoiles etoiles-hergement6">
                 <i class="fas fa-star bleue"></i><i class="fas fa-star bleue"></i><i class="fas fa-star bleue"></i><i class="fas fa-star bleue"></i><i class="fas fa-star grise"></i>
             </div> 
 
         </div>
 
         <div class="afficherplus">
-        <h4>Afficher plus</h4>
+        <h3>Afficher plus</h3>
         </div>
 
     </section>
 <!-- fin de la partie Hébergements à Marseille-->
 
-
 <!--partie hotels populaires du site-->
-    
-    <section id="populaires">
+    <aside id="populaires">
 
-        <h3>Les plus populaires<br /></h3>
-
-        <div class="conteneur-populaires">
-
-            <div class="hotelpopulaire hotelpopulaire1">
+        <h2 class="titre-populaires">
+            Les plus populaires
+            <div class="icone-graphique">
+                <i class="fas fa-chart-line"></i>
+            </div>
+        </h2>
+        <div class="vignettes-populaire">
+            <div class="hotelpopulaire1 hotelpopulaire">
 
                 <div class="img-populaire-container">
-
                     <img src="css_et_images/images/hebergements/3_medium/7.jpg" 
                     alt="hotel">
-
                 </div>
 
-                <p><strong>Hôtel le soleil du matin</strong><br />
-                Nuit à partir de <strong>128€</strong><br /></p>
+                <div class="texte-populaire">
+                    <h4>Hôtel le soleil du matin</h4>
+                    <p>Nuit à partir de <strong>128€</strong></p>
+                </div>
 
-                    <div class="etoiles">
-                        <i class="fas fa-star bleue"></i><i class="fas fa-star bleue"></i><i class="fas fa-star bleue"></i><i class="fas fa-star bleue"></i><i class="fas fa-star grise"></i>
-                    </div>
+                <div class="etoiles etoilespop1">
+                    <i class="fas fa-star bleue"></i><i class="fas fa-star bleue"></i><i class="fas fa-star bleue"></i><i class="fas fa-star bleue"></i><i class="fas fa-star grise"></i>
+                </div>
 
             </div>
 
             <div class="hotelpopulaire hotelpopulaire2">
 
                 <div class="img-populaire-container">
-
                     <img src="css_et_images/images/hebergements/3_medium/8.jpg" 
                     alt="hotel">
-
                 </div>
 
-                <p><strong>Au coeur de l'eau Chambres d'hôtes</strong><br />
-                Nuit à partir de <strong>71€</strong><br /></p>
+                <div class="texte-populaire">
+                    <h4>Au coeur de l'eau Chambres d'hôtes</h4>
+                    <p>Nuit à partir de <strong>71€</strong></p>
+                </div>
 
-                    <div class="etoiles">
-                        <i class="fas fa-star bleue"></i><i class="fas fa-star bleue"></i><i class="fas fa-star bleue"></i><i class="fas fa-star bleue"></i><i class="fas fa-star grise"></i>
-                    </div>
+                <div class="etoiles etoilespop2">
+                    <i class="fas fa-star bleue"></i><i class="fas fa-star bleue"></i><i class="fas fa-star bleue"></i><i class="fas fa-star bleue"></i><i class="fas fa-star grise"></i>
+                </div>
 
             </div>
 
             <div class="hotelpopulaire hotelpopulaire3">
 
                 <div class="img-populaire-container">
-
                     <img src="css_et_images/images/hebergements/3_medium/9.jpg" 
                     alt="hotel">
-
                 </div>
 
-                <p><strong>Hôtel tout bleu et Blanc</strong><br />
-                Nuit à partir de <strong>68€</strong><br /></p>
+                <div class="texte-populaire">
+                    <h4>Hôtel tout bleu et Blanc</h4>
+                    <p>Nuit à partir de <strong>68€</strong></p>
+                </div>
 
-                    <div class="etoiles">
-                        <i class="fas fa-star bleue"></i><i class="fas fa-star bleue"></i><i class="fas fa-star bleue"></i><i class="fas fa-star bleue"></i><i class="fas fa-star grise"></i>
-                    </div>
-
+                <div class="etoiles etoilespop3">
+                    <i class="fas fa-star bleue"></i><i class="fas fa-star bleue"></i><i class="fas fa-star bleue"></i><i class="fas fa-star bleue"></i><i class="fas fa-star grise"></i>
+                </div>
             </div>
-
         </div>
-    </section>
+    </aside>
 <!-- fin de la partie hotels populaires du site-->
 </div>
 
@@ -364,6 +376,7 @@
     </div>
 
 </div>
+
     </section>
 <!--fin de la partie activité du site-->
 
@@ -392,4 +405,8 @@
     </div>
     </footer>
 <!-- partie du menu pied de page-->
+
 </body>
+
+
+</html>
