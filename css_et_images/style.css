@@ -136,6 +136,7 @@ img
     box-shadow: 1px 1px 5px grey;
     transition: transform .1s;
     padding: 5px;
+    background-color: white;
 }
 
 
